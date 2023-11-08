@@ -10,7 +10,7 @@ import org.springframework.data.relational.core.mapping.Table;
 public class Location {
 
     @Column(name = "data")
-    //@Type(JsonType.class)
+    @Type(JsonType.class)
     private String data;
 
     public Location() {

@@ -1,24 +1,21 @@
 package com.apmm.domain;
 
 import io.hypersistence.utils.hibernate.type.json.JsonType;
-import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
 import org.hibernate.annotations.Type;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Entity(name = "location")
-@Table
-public class Location_1 {
-    //@Id
-    //private String id;
-    //private JsonNode data;
+@Table("location")
+public class Location {
 
+    @Column(name = "data")
     @Type(JsonType.class)
     private String data;
 
-    public Location_1() {
+    public Location() {
         super();
     }
-    public Location_1(String data) {
+    public Location(String data) {
         super();
         this.data = data;
 
