@@ -122,9 +122,6 @@ public class QueryServiceTest {
 
     @Test
     public void shouldReturnsearchbyName() {
-        LocationDetails ld = new LocationDetails();
-        ld.setName("test");
-        ld.setBdaType("test");
         Location location = new Location();
         location.setData(location_str);
         Mockito.when(locationRepository.findByName("test")).thenReturn(Flux.just(location));
